@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="geotables" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="geotables"
+       version="1.1">
+
+    <object class="geoTableFossils" table="geo_table_fossils" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <composite alias="geoTableFossilsItems" class="geoTableItems" local="id" foreign="fossils_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="geoTableRegions" table="geo_table_regions" extends="xPDOSimpleObject">
+        <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
+
+        <composite alias="geoTableLocal" class="geoTableLocalItem" local="id" foreign="region_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="geoTableItems" table="geo_table_items" extends="xPDOSimpleObject">
+        <field key="fossils_id" dbtype="text"  phptype="json" null="false" index="index"/>
+        <field key="year" dbtype="int" precision="4" phptype="integer" />
+
+        <aggregate alias="geoTableFossilsItems" class="geoTableFossils" local="fossils_id" foreign="id" cardinality="one" owner="foreign" />
+        <composite alias="geoTableLocalItems" class="geoTableItems" local="id" foreign="item_id" cardinality="many" owner="local" />
+    </object>
+
+    <object class="geoTableLocalItem" table="geo_table_local" extends="xPDOSimpleObject">
+        <field key="item_id" dbtype="int" precision="10" phptype="integer"  attributes="unsigned" null="false" default="0" index="index"/>
+        <field key="region_id" dbtype="int" precision="10" phptype="integer"  attributes="unsigned" null="false" default="0" index="index"/>
+        <field key="count" dbtype="int" precision="6" phptype="integer" />
+        <field key="type" dbtype="int" precision="2" phptype="integer" />
+
+        <aggregate alias="geoTableLocal" class="geoTableRegions" local="region_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="geoTableFossilsRegionItems" class="geoTableItems" local="item_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+</model>
