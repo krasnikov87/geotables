@@ -5,7 +5,7 @@ $_lang['geotables'] = 'Обьекты';
 $_lang['geotables_fossils'] = 'Ресурсы';
 $_lang['geotables_locate'] = 'Области';
 $_lang['geotables'] = 'Обьекты';
-$_lang['geotables_menu_desc'] = 'Пример расширения для разработки.';
+$_lang['geotables_menu_desc'] = 'недропользования';
 $_lang['geotables_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 
 $_lang['geotables_items'] = 'Обьекты';
