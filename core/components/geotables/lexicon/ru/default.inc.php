@@ -1,20 +1,20 @@
 <?php
 include_once 'setting.inc.php';
 
-$_lang['geotables'] = 'Обьекты';
+$_lang['geotables'] = 'Объекты';
 $_lang['geotables_fossils'] = 'Ресурсы';
 $_lang['geotables_locate'] = 'Области';
-$_lang['geotables'] = 'Обьекты';
+$_lang['geotables'] = 'Объекты';
 $_lang['geotables_menu_desc'] = 'недропользования';
 $_lang['geotables_intro_msg'] = 'Вы можете выделять сразу несколько предметов при помощи Shift или Ctrl.';
 
-$_lang['geotables_items'] = 'Обьекты';
+$_lang['geotables_items'] = 'Объекты';
 $_lang['geotables_item_id'] = 'Id';
 $_lang['geotables_item_name'] = 'Название';
 $_lang['geotables_item_description'] = 'Описание';
 $_lang['geotables_item_active'] = 'Активно';
 
-$_lang['geotables_item_create'] = 'Создать Обьект';
+$_lang['geotables_item_create'] = 'Создать Объект';
 $_lang['geotables_item_update'] = 'Изменить';
 $_lang['geotables_item_remove'] = 'Удалить';
 $_lang['geotables_items_remove'] = 'Удалить выбраное';
@@ -23,11 +23,11 @@ $_lang['geotables_items_remove_confirm'] = 'Вы уверены, что хоти
 
 
 $_lang['geotables_item_err_name'] = 'Необходимо заполнить поле "Назвние".';
-$_lang['geotables_item_err_ae'] = 'Обьекты с таким именем уже существует.';
-$_lang['geotables_item_err_nf'] = 'Обьект не найден.';
-$_lang['geotables_item_err_ns'] = 'Обьект не указан.';
-$_lang['geotables_item_err_remove'] = 'Ошибка при удалении Обьекта.';
-$_lang['geotables_item_err_save'] = 'Ошибка при сохранении Обьекта.';
+$_lang['geotables_item_err_ae'] = 'Объекты с таким именем уже существует.';
+$_lang['geotables_item_err_nf'] = 'Объект не найден.';
+$_lang['geotables_item_err_ns'] = 'Объект не указан.';
+$_lang['geotables_item_err_remove'] = 'Ошибка при удалении Объекта.';
+$_lang['geotables_item_err_save'] = 'Ошибка при сохранении Объекта.';
 
 $_lang['geotables_grid_search'] = 'Поиск';
 $_lang['geotables_grid_actions'] = 'Действия';

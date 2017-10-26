@@ -1,4 +1,4 @@
-<table id="Table1" class="responsive">
+<table id="Table1" class="responsive objects-table">
     <tbody>
     <tr>
         <th rowspan="3">
@@ -16,10 +16,10 @@
             <span style="font-size: 12px; font-weight: normal; line-height: 18px;">Итого</span>
         </th>
     </tr>
-    <tr>
-    [[+regionName]]
-        [[+resources]]
-    </tr>
+    <tr class="vertical-text">
+        [[+regionName]]
 
+    </tr>
+    [[+resources]]
     </tbody>
 </table>
