@@ -29,5 +29,13 @@ $xpdo_meta_map['geoTableFossils']= array (
       'cardinality' => 'many',
       'owner' => 'local',
     ),
+    'geoTableFossilsItem' => 
+    array (
+      'class' => 'geoTableFossilsItem',
+      'local' => 'id',
+      'foreign' => 'fossils_id',
+      'cardinality' => 'many',
+      'owner' => 'local',
+    ),
   ),
 );

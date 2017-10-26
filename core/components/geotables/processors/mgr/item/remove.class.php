@@ -29,10 +29,23 @@ class modExtraItemRemoveProcessor extends modObjectProcessor
             }
 
             $object->remove();
+
+            $this->modx->removeCollection('geoTableFossilsItem', [
+                'item_id' =>  $id,
+            ]);
+
+            $this->modx->removeCollection('geoTableLocalItem', [
+                'item_id' =>  $id,
+            ]);
         }
+
+
 
         return $this->success();
     }
+
+
+
 
 }
 

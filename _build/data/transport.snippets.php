@@ -5,10 +5,10 @@
 $snippets = array();
 
 $tmp = array(
-    /*'modExtra' => array(
-        'file' => 'modextra',
+    'geoTable' => array(
+        'file' => 'geotables',
         'description' => '',
-    ),*/
+    ),
 );
 
 foreach ($tmp as $k => $v) {

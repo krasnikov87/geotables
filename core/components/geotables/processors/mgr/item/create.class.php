@@ -33,6 +33,21 @@ class geoTableItemsCreateProcessor extends modObjectCreateProcessor
         return parent::beforeSet();
     }
 
+    public function afterSave()
+    {
+        $fossilsId = $this->getProperty('fossils_id');
+
+        foreach ($fossilsId as $id){
+            $obj = $this->modx->newObject('geoTableFossilsItem', [
+                'fossils_id' => $id,
+                'item_id' => $this->object->get('id'),
+            ]);
+            $obj->save();
+        }
+
+        return parent::afterSave();
+    }
+
 }
 
 return 'geoTableItemsCreateProcessor';

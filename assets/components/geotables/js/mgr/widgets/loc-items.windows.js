@@ -24,7 +24,6 @@ geoTables.window.locItemsCreate = function (config) {
 Ext.extend(geoTables.window.locItemsCreate, MODx.Window, {
 
     getFields: function (config) {
-        console.log(config);
         return [{
             xtype: 'hidden',
             name: 'item_id',

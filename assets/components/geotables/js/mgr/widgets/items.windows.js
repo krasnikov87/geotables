@@ -19,7 +19,6 @@ geoTables.window.CreateItem = function (config) {
         success: function (v1, v2, v3) {
 
             var res = JSON.parse(v2.response.responseText);
-            console.log(res);
 
             MODx.Ajax.request({
                 url: this.config.url,

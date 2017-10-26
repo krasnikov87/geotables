@@ -6,6 +6,7 @@
         <field key="name" dbtype="varchar" precision="100" phptype="string" null="false" default=""/>
 
         <composite alias="geoTableFossilsItems" class="geoTableItems" local="id" foreign="fossils_id" cardinality="many" owner="local" />
+        <composite alias="geoTableFossilsItem" class="geoTableFossilsItem" local="id" foreign="fossils_id" cardinality="many" owner="local" />
     </object>
 
     <object class="geoTableRegions" table="geo_table_regions" extends="xPDOSimpleObject">
@@ -30,5 +31,13 @@
 
         <aggregate alias="geoTableLocal" class="geoTableRegions" local="region_id" foreign="id" cardinality="one" owner="foreign" />
         <aggregate alias="geoTableFossilsRegionItems" class="geoTableItems" local="item_id" foreign="id" cardinality="one" owner="foreign" />
+    </object>
+
+    <object class="geoTableFossilsItem" table="geo_table_fossils_item" extends="xPDOSimpleObject">
+        <field key="item_id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0" index="index" />
+        <field key="fossils_id" dbtype="int" precision="10" phptype="integer" attributes="unsigned" null="false" default="0" index="index" />
+
+        <aggregate alias="geoTableFossilsRegionItems" class="geoTableItems" local="item_id" foreign="id" cardinality="one" owner="foreign" />
+        <aggregate alias="geoTableFossilsItem" class="geoTableFossils" local="fossils_id" foreign="id" cardinality="one" owner="foreign" />
     </object>
 </model>

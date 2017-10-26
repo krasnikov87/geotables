@@ -51,7 +51,6 @@ class geoTableItemsGetListProcessor extends modObjectGetListProcessor
     public function prepareRow(xPDOObject $object)
     {
         $array = $object->toArray();
-        $this->modx->log(1, print_r($array['fossils_id'], 1));
         $fossils = $this->modx->getCollection('geoTableFossils', ['id:IN'=>$array['fossils_id']]);
 
         $nameFossil = '';

@@ -5,14 +5,22 @@
 $chunks = array();
 
 $tmp = array(
-   /* 'tpl.modExtra.item' => array(
-        'file' => 'item',
+    'tpl.geotable.outerTpl' => array(
+        'file' => 'outerTpl',
         'description' => '',
     ),
-    'tpl.modExtra.office' => array(
-        'file' => 'office',
+    'tpl.geotable.regionTpl' => array(
+        'file' => 'regionTpl',
         'description' => '',
-    ),*/
+    ),
+    'tpl.geotable.resourceRowTpl' => array(
+        'file' => 'resourceRowTpl',
+        'description' => '',
+    ),
+    'tpl.geotable.resourceItemTpl' => array(
+        'file' => 'resourceItemTpl',
+        'description' => '',
+    )
 );
 
 // Save chunks for setup options
